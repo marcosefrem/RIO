@@ -1,0 +1,134 @@
+/*	--------------------------------------------------
+	Tabs
+-------------------------------------------------- */
+/* Reset bullets */
+
+.nav-tabs {
+	
+	li{
+		
+		&.active{
+			
+			 
+		}
+		
+		//Reset bullets
+		&:before{
+			content: '';
+			display: none;
+		}
+	}
+	> li {
+		
+		
+		&.active{
+
+			> a{
+				
+				&:hover{
+					
+					
+				}
+			}
+			
+			
+		}
+	}
+	
+}
+
+.tab-content { 
+	
+}
+
+.container-special{
+	width: 90%;
+	display: block;
+	margin: auto;	
+	padding: 0;
+		
+}
+
+.nav-tabs{
+	
+	padding: 0;
+
+	display: block;
+	margin: auto;
+	margin-bottom: 22px;
+	border-bottom: 0;
+	li{
+		text-align: center;
+		border:0;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+		height: 40px!important;
+		&:first-child{
+		}
+		&:last-child{
+			a{
+			  border-right: 0px solid #061825!important;
+			}
+		}		
+		a{
+			
+			background: #35465f;
+			color:@color-white;
+			border-top:0!important;
+			border-left:0!important;
+			border-right:0!important;
+			text-transform: uppercase;		
+			border-radius: 0!important;	
+			display: table;
+			width: 100%;
+			height: 60px;
+			padding: 5px!important;
+			vertical-align: middle;
+			  border-radius: 0!important;
+			  border-right: 1px solid #061825!important;
+			  
+			 span{
+				 display: table-cell;
+				 vertical-align: middle;
+				 line-height: 15px;
+				 font-weight: 600;
+			 } 
+			  
+			&:hover{
+				background: @color-grey;
+			}
+		}
+	}
+	
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background: @color-grey;
+	text-transform: uppercase;			
+	color:#061825;
+	
+	&:before{
+		display: block;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		display: block;
+		margin: auto;
+		content: "";
+		background: url('../img/icons/icon-arrow-down.png');
+		background-size: 100%;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+}
+
+
+
+.tab-content{
+	display: block;
+	margin: auto;		
+}
+
+	

@@ -1,0 +1,41 @@
+/*	----------------------------------------------------------------------------------------------------
+*
+*	 Bloque de ejemplo, borrar
+*
+------------------------------------------------------------------------------------------------------ */
+
+
+.block-carousel{
+	display: block!important;
+	.owl-controls{
+		position: absolute;
+		width: 100%;
+		.owl-dots{
+			display: block!important;
+			.owl-dot{
+				background: @color-white;
+				border:1px solid @color-primary;
+				width: 15px;
+				height: 15px;
+				&.active{
+					&:before{
+						width: 70%;
+						height: 70%;
+						left: 15%;
+						top:15%;
+						background: @color-primary;
+						border-radius: 50%;
+						content: "";
+						display: block;
+						position: relative;
+					}
+				}
+				
+			}
+		}
+	
+	}
+	
+	
+	
+}

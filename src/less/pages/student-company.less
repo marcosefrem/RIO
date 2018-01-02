@@ -1,0 +1,70 @@
+/*	----------------------------------------------------------------------------------------------------
+*
+*	 Student-company
+*
+------------------------------------------------------------------------------------------------------ */
+
+
+.student-company{
+    color: #fff;
+    height: 360px;
+    margin: 2.5%;
+    overflow: hidden;
+    position: relative;	
+
+
+    @media (max-width: @screen-max-xs) {
+	 	height: 600px;
+     }
+    @media (max-width: 480px) {
+	 	height: 400px;
+     }     
+    img{
+	     @media (max-width: @screen-max-xs) {
+	    	 margin-top: -24%;
+	    }
+    }
+	
+	.info{
+	}
+
+
+	.content-slide {
+	    background: @color-secondary none repeat scroll 0 0;
+	    color:@color-white;
+	    bottom: 0;
+	    height: 30%;
+	    position: absolute;
+	    transition: all 0.3s ease-in-out 0s;
+	    width: 100%;
+	    padding: 15px;
+	    padding-right: 30px;
+	    &.opened{
+		    
+			height: 100%;
+		    
+	    }
+	    
+	}
+	
+	
+	h2:before {
+	    background: url("../img/icons/icon-more.png") no-repeat scroll center center;
+	    content: "";
+	    display: block;
+	    height: 25px;
+	    position: absolute;
+	    right: 10px;
+	    top: 8px;
+	    width: 25px;
+	}
+	
+	
+	
+	.opened h2::before {
+	    background: url("../img/icons/icon-less.png") no-repeat scroll center center;
+
+	}
+
+
+}

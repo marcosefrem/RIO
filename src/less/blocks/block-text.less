@@ -1,0 +1,173 @@
+/*	----------------------------------------------------------------------------------------------------
+*
+*	 Bloque de ejemplo, borrar
+*
+------------------------------------------------------------------------------------------------------ */
+
+
+
+.block-text{
+	
+	
+	padding: 20px;
+	p{
+		text-align: justify;
+	}
+	.pull-right{
+		.out-layer	{
+			margin-right: -10%;
+			margin-left: 0%;
+			@media (max-width: @screen-max-xs) {
+				margin-right: 0%;
+				margin-left: 0%;
+			}	
+
+		}		
+	}
+	.out-layer	{
+		margin-left: -10%;
+		max-height: 150px;
+		
+		@media (max-width: @screen-max-xs) {
+			margin-left: 0%;
+		}		
+	}		
+
+	
+	.title-bg{
+		background: @color-primary;
+		display: inline-block;
+		clear: both;
+		margin-bottom: 15px;
+		font-size: 16px;
+		color:@color-white;
+		font-weight: 300;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		span{
+			display: block;
+			transform: skew(0deg);
+			font-family: 'eurosoftregular';
+				
+		}
+
+	}
+	
+	
+	[class*="skew-"]{
+	    max-width: inherit;
+	    width: 110%;		
+		@media (max-width: @screen-max-xs) {
+			margin-left: 20px!important;
+			width: 90%;	
+		}			
+		
+		.img-responsive{
+		    margin-left: -6%;
+		    margin-top: -75px;
+		    max-width: 115%;
+		    width: 115%;
+			@media (max-width: @screen-max-sm) {
+				 margin-top: -5px;
+				 max-width: 120%;
+				 width: 120%;
+				 margin-left: -10%;			 
+			}	
+			@media (max-width: @screen-max-xs) {
+				max-width: 120%;
+				width: 120%;
+				margin-left: -8%;			
+			}		    
+		    
+		}
+	}
+	.skew-xs.pull-left{
+	   	 margin-right: 40px;
+	   	 max-width: 260px;
+
+	   	 .img-responsive{
+	   	 	margin-left: -13%;
+			@media (max-width: @screen-max-md) {
+	   	 		margin-left: -15%;
+			}	   	 	
+			@media (max-width: @screen-max-sm) {
+	   	 		margin-left: -15%;
+			} 	   	 	
+	   	 }
+	   	 &.out-layer{
+		   	 
+		   	 max-height: 190px;
+		   	 
+		   	 .img-responsive{
+			   	 margin-top: -25px;
+			   	 max-width: 125%;
+			   	 width: 125%;				   	 
+		   	 } 
+		   	 
+			@media (max-width: @screen-max-xs) {
+			    margin-right: 0px;
+			    max-width: 100%;
+				margin-bottom: 15px;
+ 			    .img-responsive{
+				     margin-left: -10%;
+					 margin-bottom: 15px;
+				     
+			    }   
+    
+    
+    		} 		   	 
+		   	 
+	   	 }
+	
+	}
+	.skew-xs.pull-right{
+	   	 margin-left: 40px;
+	   	 max-width: 260px;
+	   	 margin-right: -20px;
+	   	 .img-responsive{
+	   	 	margin-left: -13%;
+			@media (max-width: @screen-max-md) {
+	   	 		margin-left: -15%;
+			}	   	 	
+			@media (max-width: @screen-max-sm) {
+	   	 		margin-left: -15%;
+			}	   	 	
+	   	 }
+	   	 &.out-layer{
+		   	 
+		   	 max-height: 190px;
+		   	 
+		   	 .img-responsive{
+			   	 margin-top: -25px;
+			   	 max-width: 125%;
+			   	 width: 125%;			   	 
+		   	 } 	
+			@media (max-width: @screen-max-xs) {
+			    margin-right: 0px;
+			    max-width: 100%;
+			    margin-bottom: 15px;
+			    
+			    .img-responsive{
+				     margin-left: -10%;
+					 margin-bottom: 15px;
+				     
+			    }
+    
+    		} 		   	 
+		   	 
+		   	 	   	 
+	   	 }	   	 
+	   	 
+	}
+		
+		
+	[class*="pull-"]{
+		@media (max-width: @screen-max-xs) {
+			float: none!important;
+		}
+	}	
+		
+
+}

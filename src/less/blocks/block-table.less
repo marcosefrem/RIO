@@ -1,0 +1,176 @@
+/*	----------------------------------------------------------------------------------------------------
+*
+*	 Bloque de ejemplo, borrar
+*
+------------------------------------------------------------------------------------------------------ */
+
+
+
+.block-table{
+	
+	table{
+		width: 100%;
+		
+		tbody{
+			
+			&.skew{
+				td{
+					border-right: 0px solid @color-green;
+					text-align: left;
+					position: relative;
+					
+					&:first-child{
+						&:before{
+							display: none;
+						}
+					}
+					
+					&:before{
+						background: @color-green;
+					    content: "";
+					    display: block;
+					    height: 100%;
+					    left: -27px;
+					    position: absolute;
+					    width: 1px;				
+						
+					}										
+				}
+
+			}			
+			
+			
+			tr{
+				&:first-child{
+					td span{
+						padding-top: 15px;
+					}
+				}
+			}
+		}
+		
+		tfoot{
+
+			&.skew{
+				span{
+					&:before{
+
+						left: -30px;
+	
+					}							
+					
+					
+				}
+			}
+			span{
+				  margin-top: 15px;
+				  
+				&:before{
+					position: absolute;
+					content: "";
+					display: block!important;
+					background: #bbc7b9;
+					height: 2px;
+					width: 100%;
+					left: 0px;
+					top:-4px;
+				}					  
+			}		
+		}
+		th{
+			padding: 10px;
+			color:@color-white;
+			text-align: center;
+			font-family: 'eurosoftregular';
+			span.begin{
+			   border: 0 none;
+			    border-radius: 6px;
+			    display: block;
+			    height: 39px;
+			    left: -15px;
+			    position: absolute;
+			    top: 0;
+			    width: 20px;
+			    @media (max-width: @screen-max-xs) {
+			 	   height: 38px;
+			    }			    
+				&:before{
+					display: none;
+				}
+			}
+			span.end{
+			   border: 0 none;
+			    border-radius: 6px;
+			    display: block;
+			    height: 39px;
+			    right: -15px;
+			    position: absolute;
+			    top: 0;
+			    width: 20px;
+			    @media (max-width: @screen-max-xs) {
+			 	   height: 38px;
+			    }
+				&:before{
+					display: none;
+				}
+			}			
+			
+		}
+		td{
+			
+			&.skew{
+				border-right: 0px solid @color-green;
+				text-align: left;
+			}
+			border-right: 1px solid @color-green;
+			text-align: center;
+			&:first-child{
+				border-left: 0px solid @color-green;
+			}
+			&:last-child{
+				border-right: 0px solid @color-green;
+
+			}
+			
+			
+			&:first-child{
+				span{
+					
+					&:before{
+						display: none;
+					}
+				}
+			}
+		}
+		
+		span{
+			padding: 4px;
+			display: block;
+			transform: skew(0deg);
+			font-family: 'eurosoftregular';
+			&:before{
+				background: @color-green;
+			    content: "";
+			    display: none;
+			    height: 100%;
+			    left: -25px;
+			    position: absolute;
+			    width: 1px;				
+				
+			}
+			
+		}
+		
+	}
+	
+	
+	.table-responsive-xs{
+		@media (max-width: @screen-max-xs) {
+			overflow-x: auto;
+			table{
+				min-width: 900px;
+			}
+		}
+	}
+	
+}
