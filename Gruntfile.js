@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		system: 'html/',
 		tplPath: 'src/',
 		tpl: 'html',
-		web: 'localhost/RIO_HTML/html/'
+		web: 'rio.dev'
 	};	
 	
 	//Necesario para el updater de dependencias
