@@ -4,24 +4,51 @@
 
 .main {
   padding: 25px 0;
-  hgroup {
-    font-size: 18px;
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
     color: @color-primary;
-  }
-}
-
-.block {
-  &__heading {
-    &__title {
-      font-size: 20px;
-      font-weight: bold;
-      color: @color-primary;
-      margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
   }
   p {
     line-height: 30px;
     color: @color-primary;
+  }
+}
+
+.breakup {
+  height: 4px;
+  background: -moz-linear-gradient(left, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  background: -webkit-linear-gradient(left, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  background: linear-gradient(to right, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  &--blurred {
+    height: 5px;
+    background: -moz-linear-gradient(left, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  &--vertical {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    left: 10px;
+    top: -30px;
+  }
+  &--vertical-inverse {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+  &--square {
+    margin-top: -45px;
   }
 }
 
@@ -62,6 +89,7 @@
 }
 
 .col-fx {
+  position: relative;
   &--margin {
     @media (min-width: @screen-max-xs) {
       margin: 0 15px 0 -15px;
