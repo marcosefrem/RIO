@@ -2,5 +2,257 @@
 	Header
 ---------------------------------------------------*/
 
-// Usar siempre la variable para darle altura en mobile.
-@mobileHeaderHeight: 100px;
+.masthead {
+	min-height: 110px;
+	position: relative;
+	overflow: hidden;
+	@media (min-width: @screen-max-xs) {
+		min-height: 500px;
+	}
+	&__holder {
+		width: 100%;
+		position: relative;
+		z-index: 9999;
+	}
+	&__bar {
+		min-height: 35px;
+		text-align: right;
+		background: @color-warning2;
+		background: -moz-linear-gradient(left, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(208, 171, 100, 1) 11%, rgba(208, 171, 100, 1) 12%, rgba(208, 171, 100, 1) 100%);
+		background: -webkit-linear-gradient(left, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(208, 171, 100, 1) 11%, rgba(208, 171, 100, 1) 12%, rgba(208, 171, 100, 1) 100%);
+		background: linear-gradient(to right, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(208, 171, 100, 1) 11%, rgba(208, 171, 100, 1) 12%, rgba(208, 171, 100, 1) 100%);
+		padding-right: 10px;
+		ul {
+			margin-bottom: 0;
+			li {
+				height: 34px;
+				margin: 0 -2px 1px 0 !important;
+				position: relative;
+				&::before {
+					content: '';
+					width: 2px;
+					height: 18px;
+					background: @color-white;
+					display: none;
+					position: absolute !important;
+					left: -2px !important;
+					top: 7px;
+					@media (min-width: @screen-max-xs) {
+						display: block;
+					}
+				}
+				&:first-child {
+					display: none;
+					@media (min-width: @screen-max-xs) {
+						display: inline-block;
+					}
+					&::before {
+						display: none;
+					}
+				}
+				&:hover {
+					background: @color-primary;
+					a {
+						color: @color-warning2;
+					}
+				}
+				a {
+					padding: 8px 0 0 !important;
+					color: @color-white;
+					text-decoration: none;
+					display: block;
+					@media (min-width: @screen-max-xs) {
+						padding: 8px 30px 0 !important;
+					}
+				}
+			}
+		}
+	}
+	&__branding {
+		margin-top: -35px;
+		position: absolute;
+		z-index: 9999;
+		img {
+			max-width: 50%;
+			@media (min-width: @screen-max-xs) {
+				max-width: 100%;
+			}
+		}
+	}
+	&__navigation {
+		min-height: 35px;
+		text-align: right;
+		background: @color-primary;
+		background: -moz-linear-gradient(left, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(46, 67, 127, 1) 11%, rgba(46, 67, 127, 1) 12%, rgba(46, 67, 127, 1) 100%);
+		background: -webkit-linear-gradient(left, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(46, 67, 127, 1) 11%, rgba(46, 67, 127, 1) 12%, rgba(46, 67, 127, 1) 100%);
+		background: linear-gradient(to right, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0) 10%, rgba(46, 67, 127, 1) 11%, rgba(46, 67, 127, 1) 12%, rgba(46, 67, 127, 1) 100%);
+		padding-right: 10px;
+		position: relative;
+		ul {
+			margin-bottom: 0;
+			display: none;
+			@media (min-width: @screen-max-sm) {
+				display: block;
+			}
+			li {
+				height: 34px;
+				padding: 0 !important;
+				margin: 1px -2px 0 0 !important;
+				position: relative;
+				&::before {
+					content: '';
+					width: 2px;
+					height: 18px;
+					background: @color-white;
+					position: absolute !important;
+					left: -2px !important;
+					top: 7px;
+				}
+				&:first-child {
+					&::before {
+						display: none;
+					}
+				}
+				a {
+					height: 100%;
+					padding: 8px 30px 0 !important;
+					color: @color-white;
+					text-decoration: none;
+					display: block;
+					&:hover {
+						color: @color-primary;
+						background: @color-warning2;
+					}
+				}
+				.dropdown-menu {
+					min-width: auto !important;
+					box-shadow: none !important;
+					background: transparent !important;
+					border-radius: 0 !important;
+					display: none;
+					li {
+						height: auto;
+						text-align: center;
+						background: @color-primary !important;
+						border: none !important;
+						border-radius: 0 !important;
+						padding: 0 !important;
+						margin: 1px 0 !important;
+						&:hover {
+							color: @color-primary !important;
+							background: @color-warning2 !important;
+						}
+						a {
+							font-size: 13px;
+							color: @color-white;
+							padding: 8px 0 !important;
+						}
+					}
+				}
+				.dropdown-submenu {
+					position: relative;
+					& > .dropdown-menu {
+						display: none;
+						top: 0;
+						left: 100%;
+						margin-top: 10px;
+						margin-left: 2px;
+					}
+					&:hover > .dropdown-menu {
+						transition: all 2s linear;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&__social {
+		width: 50px;
+		display: none;
+		position: absolute;
+		z-index: 1000;
+		top: 200px;
+		right: 0;
+		@media (min-width: @screen-max-xs) {
+			display: block;
+		}
+		ul {
+			li {
+				height: 36px;
+				display: block;
+				margin-bottom: 20px;
+				padding: 0 !important;
+				border-bottom: 3px @color-warning2 solid;
+				box-sizing: content-box;
+				&::before {
+					display: none;
+				}
+				.social-instagram, .social-youtube {
+					font-size: 26px;
+					color: @color-white;
+					border: 1px @color-white solid;
+					border-radius: 6px;
+					padding: 4px;
+				}
+				.social-facebook {
+					font-size: 32px;
+					color: @color-white;
+				}
+				a {
+					display: block;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__hero {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@media (min-width: @screen-max-xs) {
+			min-height: 500px;
+		}
+		.item {
+			width: 100%;
+			position: relative;
+			&__content {
+				// display: none;
+				padding: 25px 0;
+				margin: 0 auto;
+				position: absolute !important;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				@media (min-width: @screen-max-xs) {
+					display: block;
+				}
+				p {
+					line-height: 28px;
+					text-align: justify;
+					color: @color-white;
+				}
+			}
+			&__heading {
+				margin-bottom: 20px;
+				&__title {
+					font-size: 24px;
+					font-weight: bold;
+					color: @color-white;
+				}
+			}
+		}
+	}
+	&::before {
+		content: '';
+		width: 50%;
+		height: 70px;
+		background: rgb(209, 172, 100);
+		background: -moz-linear-gradient(top, rgba(209, 172, 100, 1) 0%, rgba(209, 172, 100, 1) 50%, rgba(46, 67, 127, 1) 50%, rgba(46, 67, 127, 1) 100%);
+		background: -webkit-linear-gradient(top, rgba(209, 172, 100, 1) 0%, rgba(209, 172, 100, 1) 50%, rgba(46, 67, 127, 1) 50%, rgba(46, 67, 127, 1) 100%);
+		background: linear-gradient(to bottom, rgba(209, 172, 100, 1) 0%, rgba(209, 172, 100, 1) 50%, rgba(46, 67, 127, 1) 50%, rgba(46, 67, 127, 1) 100%);
+		position: absolute;
+		z-index: 9999;
+		right: 0;
+	}
+}

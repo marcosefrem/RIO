@@ -1,273 +1,195 @@
 // -------------------------------------------------- 
 //	Nav off canvas
 // --------------------------------------------------
-
-
 //Cambiar XS por SM si lo queremos en iPad
 @media (max-width: @screen-max-sm) {
-		
 	button.navbar-toggle .icon-bar {
-	    height: 3px;
-	    width: 22px;
-	}		
-	button.navbar-toggle{
-		&[data-side="right"]{
-			position: absolute;
+		height: 3px;
+		width: 22px;
+	}
+	button.navbar-toggle {
+		&[data-side="right"] {
+			// position: absolute;
 			left: auto;
-			right: 20px;
-			top:20px;
-			span{
+			right: 12px;
+			top: 8px;
+			span {
 				background: @color-white;
 			}
 		}
 	}
-	
-	
 	.in {
-		&.left{
+		&.left {
 			button.navbar-toggle {
-				
-				&[data-target="#off-canvas-left"]{
-					
-					span{
+				&[data-target="#off-canvas-left"] {
+					span {
 						transform: rotate(45deg);
-						top:5px;
-					
-						&:nth-child(2n){
+						top: 5px;
+						&:nth-child(2n) {
 							opacity: 0;
 						}
-						
-						&:last-child{
+						&:last-child {
 							transform: rotate(-45deg);
-							top:-7px;
+							top: -7px;
 						}
-					}						
-					
-					
+					}
 				}
-				
-				
-			}
-		}
-	}	
-	
-	.in{
-		&.right{
-			button.navbar-toggle{
-				&[data-side="right"]{
-					
-					span{
-						transform: rotate(45deg);
-						top:5px;
-					
-						&:nth-child(2n){
-							opacity: 0;
-						}
-						
-						&:last-child{
-							transform: rotate(-45deg);
-							top:-7px;
-						}
-					}						
-					
-					
-				}				
 			}
 		}
 	}
-	
-		
+	.in {
+		&.right {
+			button.navbar-toggle {
+				&[data-side="right"] {
+					span {
+						transform: rotate(45deg);
+						top: 5px;
+						&:nth-child(2n) {
+							opacity: 0;
+						}
+						&:last-child {
+							transform: rotate(-45deg);
+							top: -7px;
+						}
+					}
+				}
+			}
+		}
+	}
 	//Estilos del botón	
 	button.navbar-toggle {
 		width: 20px;
 		height: 20px;
-		
-		span{
-			 transition: all 0.5s ease;
-			 opacity: 1;
+		span {
+			transition: all 0.5s ease;
+			opacity: 1;
 		}
-		
-		
-		
 	}
-	
-	
-	
-	
 	//Estilos del menu
 	.off-canvas {
 		padding-top: 0;
-		top:57px;
+		top: 57px;
 		//Version izquierda
-		&[data-side="left"]{
-			
-			
-			li{
+		&[data-side="left"] {
+			li {
 				background: @color-white;
 				margin-bottom: 1px;
-				.caret{
+				.caret {
 					background: url('../img/icon-caret-primary.png');
 					background-repeat: no-repeat;
 					width: 15px;
 					height: 15px;
 					background-size: 100%;
 					transform: rotate(180deg);
-					
-				
-
-						
-					}
-					
-
-				a{
-					color:@color-primary;
+				}
+				a {
+					color: @color-primary;
 					display: block;
 					padding-top: 15px;
 					padding-bottom: 15px;
-					&:hover{
-						text-decoration: none;	
-					}				
-					&.opened{
-						
-						background: @color-primary;
-						color:@color-white;
-						 + .caret{
-							background: url('../img/icon-caret-white.png');
-							transform: rotate(0deg);	
-							background-size: 100%;	
-							background-repeat: no-repeat;
-																				
-						}
-					
+					&:hover {
+						text-decoration: none;
 					}
-					
-					&.log-out{
+					&.opened {
+						background: @color-primary;
+						color: @color-white;
+						+ .caret {
+							background: url('../img/icon-caret-white.png');
+							transform: rotate(0deg);
+							background-size: 100%;
+							background-repeat: no-repeat;
+						}
+					}
+					&.log-out {
 						background: @color-dark-blue;
 						color: @color-white;
 					}
 				}
-				
-				ul{
+				ul {
 					background: @color-grey;
 				}
-				
-				li{
+				li {
 					margin-left: 0;
 					background: @color-grey-softest;
-					&:last-child{
+					&:last-child {
 						margin-bottom: 0;
 					}
-					a{
+					a {
 						margin-left: 0;
 						color: @color-text-dark;
-						&:hover{
-							text-decoration: none;	
+						&:hover {
+							text-decoration: none;
 						}
-
-
-						
 					}
 				}
-				
 			}
-			
-
-		}		
-
+		}
 		//Version derecha
-		&[data-side="right"]{
+		&[data-side="right"] {
 			z-index: 9999!important;
 			background: @color-primary;
 			position: fixed;
-			top:60px;
-			
-			
-			
-			
-
-			.inner-nav{
+			top: 60px;
+			.inner-nav {
 				padding: 15px;
-				padding-top: 0;
+				padding-top: 45px;
 			}
-			.menu-canvas{
-			    margin-left: -15px;
+			.menu-canvas {
+				margin-left: -15px;
 				margin-right: -15px;
 				padding-bottom: 100px;
 			}
-			.icon{
+			.icon {
 				margin-right: 15px;
 				margin-left: 15px;
 				margin-top: 7.5px;
 			}
-			li{
-				border-bottom: 1px solid @color-white;
-				&:before{
+			li {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				&:before {
 					content: ">";
 					position: absolute;
 					right: 15px;
-					top:15px;
-					color:@color-white;
+					top: 15px;
+					color: @color-white;
 					display: block;
 					left: auto;
 				}
-				&:nth-last-child(2){
-					&:before{
+				&:nth-last-child(2) {
+					&:before {
 						color: #1d4288;
 					}
 				}
-
 			}
-			a{
+			a {
 				margin-left: 15px;
-				color:@color-white;
+				color: @color-white;
 				padding-top: 15px;
 				padding-bottom: 15px;
 				text-transform: none;
-				 font-family: 'eurosoftitalic';
-				&:hover{
-					text-decoration: none;	
+				&:hover {
+					text-decoration: none;
 				}
-				
-				&.blue{
-					
-				 	background: #d4edfc none repeat scroll 0 0;
-				 	color: #1d4288;
-				 	margin-left: 0;
-				 	padding-left: 25px;
-
-    			}
-				
-				
+				&.blue {
+					background: #d4edfc none repeat scroll 0 0;
+					color: #1d4288;
+					margin-left: 0;
+					padding-left: 25px;
+				}
 			}
-		}		
-		
+		}
 		//Version top
-		&[data-side="top"]{
-
-		}		
-		
+		&[data-side="top"] {}
 		//Versión bottom
-		&[data-side="bottom"]{
-
-		}		
+		&[data-side="bottom"] {}
 	}
-
-
 	//Estilos de la capa semitransparente
-	.canvas-wrap { 
-
-	}
-	
+	.canvas-wrap {}
 	//Tipos de animaciones
-
 	//Opción 1. El body se oculta para mostrar el off-canvas
 	//@import "../plugins/offcanvas/offcanvas-move.less";
-	
 	//Opcion 2. El off-canvas aparece por encima del body
 	@import "../plugins/offcanvas/offcanvas-overlay.less";
-	
 	//Opcion 3. El off-canvas desplaza al body excepto al header (Añadir clase hide-canvas-in a elementos que no sean el main)
 	//@import "../plugins/offcanvas/offcanvas-overlay-move.less";
-
-
-}		
+}

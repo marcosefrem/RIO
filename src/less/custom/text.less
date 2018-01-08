@@ -4,35 +4,31 @@
 *
 ------------------------------------------------------------------------------------------------------ */
 
-.decoration-sides{
+.decoration-sides {
 	display: inline-block;
 	position: relative;
-	
-	&:after{
+	&:after {
 		display: block;
 		width: 100px;
 		height: 1px;
 		position: absolute;
-		top:0;
+		top: 0;
 		bottom: 0;
 		margin: auto;
 		left: -115px;
 		content: "";
 		background: @color-white;
-		
 	}
-	&:before{
+	&:before {
 		display: block;
 		width: 100px;
 		height: 1px;
 		position: absolute;
-		top:0;
+		top: 0;
 		bottom: 0;
 		margin: auto;
 		right: -115px;
 		content: "";
 		background: @color-white;
-
-	}	
-	
+	}
 }

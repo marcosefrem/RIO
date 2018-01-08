@@ -1,29 +1,26 @@
 // -------------------------------------------------- 
 //	Nav off canvas
 // --------------------------------------------------
-
 .off-canvas, button.navbar-toggle {
 	display: none;
-	z-index:9999;
-
+	z-index: 9999;
 }
 
-#off-canvas-right{
-	.absolute.right.top{
-		top:10px;
+#off-canvas-right {
+	.absolute.right.top {
+		top: 10px;
 		right: 8px;
 	}
-	
-			
 }
-.off-canvas{
-	.container{
+
+.off-canvas {
+	.container {
 		max-width: 100%;
 	}
 }
 
-.user-info{
-	img{
+.user-info {
+	img {
 		min-height: 80px;
 		width: auto;
 	}
@@ -31,58 +28,53 @@
 
 //Cambiar XS por SM si lo queremos en iPad
 @media (max-width: @screen-max-sm) {
-		
-	.navmenu{
-		.btn-link{
-			&.top{
-					
-				top:10px;
+	.navmenu {
+		.btn-link {
+			&.top {
+				top: 10px;
 			}
-					
-		}			
-	}	
-
-
+		}
+	}
 	button.navbar-toggle {
 		margin: 0;
 		padding: 0;
 		position: absolute;
 		display: block;
-		top:26px;
+		top: 26px;
 		border-radius: 0px;
 		background: none;
 		border: 0;
 		cursor: pointer;
 		@media (max-width: @screen-max-sm) {
-			top: 15px;	
+			top: 15px;
 			left: 15px;
 		}
-		
-		&.right{
+		&.right {
 			right: 15px;
-		
-	
 		}
-		
-		&.close-canvas{
+		&.close-canvas {
 			left: 15px;
-			top:25px;
-			.icon-bar{
-				 -ms-transform: rotate(45deg); /* IE 9 */
-			    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-			    transform: rotate(45deg);				
+			top: 25px;
+			.icon-bar {
+				-ms-transform: rotate(45deg);
+				/* IE 9 */
+				-webkit-transform: rotate(45deg);
+				/* Chrome, Safari, Opera */
+				transform: rotate(45deg);
 			}
-			.icon-bar + .icon-bar{
-				 -ms-transform: rotate(-45deg); /* IE 9 */
-			    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
-			    transform: rotate(-45deg);		
-			    top:-3px;		
-			}			
-			&[data-side="right"]{
+			.icon-bar + .icon-bar {
+				-ms-transform: rotate(-45deg);
+				/* IE 9 */
+				-webkit-transform: rotate(-45deg);
+				/* Chrome, Safari, Opera */
+				transform: rotate(-45deg);
+				top: -3px;
+			}
+			&[data-side="right"] {
 				left: auto;
 				right: 10px;
-				top:19px;
-				span{
+				top: 19px;
+				span {
 					//width: 5px;
 					//height: 5px;
 					//border-radius: 50%;
@@ -90,7 +82,6 @@
 					//	top:auto;
 					//}
 				}
-
 			}
 		}
 		.icon-bar {
@@ -100,32 +91,25 @@
 			display: block !important;
 			width: 40px;
 			& + .icon-bar {
-				
 				margin-top: 3px;
-				
 			}
 		}
-		
-		.title{
+		.title {
 			font-size: 0.8rem;
-			
 		}
-		
 		@media (max-width: @screen-max-xs) {
-			
-			.icon-bar { height: 3px;  width: 22px;}
-		}				
-		
-		
+			.icon-bar {
+				height: 3px;
+				width: 22px;
+			}
+		}
 	}
-
-.in.left{
-	.off-canvas[data-side="left"] {
-		left: 0;
-		transition: .5s;
+	.in.left {
+		.off-canvas[data-side="left"] {
+			left: 0;
+			transition: .5s;
+		}
 	}
-}	
-	
 	.off-canvas {
 		display: block;
 		padding-top: 0px!important;
@@ -140,177 +124,141 @@
 		-webkit-overflow-scrolling: touch;
 		//iPad
 		@media (max-width: @screen-max-sm) {
-			width: 320px;
-			left: -320px;
-			
-		}		
-				
+			width: 260px;
+			left: -260px;
+		}
 		//Móvil
 		@media (max-width: @screen-max-xs) {
 			width: 80%;
 			left: -80%;
-		}	
-		
+		}
 		//Version derecha
-		&[data-side="right"]{
-			
+		&[data-side="right"] {
 			left: auto;
 			//right: -100%;
-			
 			//iPad
 			@media (max-width: @screen-max-sm) {
-				width: 320px;
-				left: auto;				
-				right: -320px;
-			}				
+				width: 260px;
+				left: auto;
+				right: -260px;
+			}
 			//Móvil
 			@media (max-width: @screen-max-xs) {
 				//width: 100%;
 				left: auto;
 				//right: -100%;
-			}	
-			
-		}		
-		
+			}
+		}
 		//Version top
-		&[data-side="top"]{
+		&[data-side="top"] {
 			left: auto;
 			right: auto;
-			top:-100%;
+			top: -100%;
 			width: 100%;
-		}		
-		&[data-side="bottom"]{
+		}
+		&[data-side="bottom"] {
 			left: auto;
 			right: auto;
-			bottom:-100%;
+			bottom: -100%;
 			width: 100%;
-		}		
+		}
 	}
-	
-	
-	html.out, body.out{
+	html.out, body.out {
 		left: 0px;
 	}
-	
-	.canvas-wrap { 
+	.canvas-wrap {
 		display: none;
 		width: 100%;
 		position: absolute;
 		z-index: 99999;
-		background: rgba(0,0,0,.2);
+		background: rgba(0, 0, 0, .2);
 		transition: .5s;
 	}
-	
-	html, body{
+	html, body {
 		left: 0;
-		transition-property: left,right, top, bottom;
-		transition-duration: 0.5s, 0.5s, 0.5s, 0.5s;
-		
-	}
-	
-	html.out .off-canvas{
-		transition-property: left,right, top, bottom;
+		transition-property: left, right, top, bottom;
 		transition-duration: 0.5s, 0.5s, 0.5s, 0.5s;
 	}
-	
-	.canvas-wrap { z-index: 88; }
-	
+	html.out .off-canvas {
+		transition-property: left, right, top, bottom;
+		transition-duration: 0.5s, 0.5s, 0.5s, 0.5s;
+	}
+	.canvas-wrap {
+		z-index: 88;
+	}
 	//Ponemos el off-canvas en absolute para poder animarlo
-	body.in, body.out{
+	body.in, body.out {
 		//.off-canvas { position: absolute; }
 	}
-		
-	
-
 }
 
-.menu-canvas	{
-	
-
-	
-	li{
+.menu-canvas {
+	li {
 		display: block;
 		padding-left: 0;
 		padding-bottom: 0!important;
-		
-		a{
+		a {
 			display: block;
 			padding: 10px;
 			text-transform: uppercase;
 			font-size: 13px;
-			
-			
-			&.opened{
-				 + .caret{
-					
-					-ms-transform: rotate(180deg); /* IE 9 */
-				    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-				    transform: rotate(180deg);					
-					
+			&.opened {
+				+ .caret {
+					-ms-transform: rotate(180deg);
+					/* IE 9 */
+					-webkit-transform: rotate(180deg);
+					/* Chrome, Safari, Opera */
+					transform: rotate(180deg);
 				}
 			}
-			
 		}
-		
-			.caret{
-				border:0;
-				background: url('../img/icon-caret-grey.png') no-repeat;
-				background-size: 100%;
-				width: 17px;
-				height: 11px;
-				top:5px;
-				  -webkit-transition: all .3s ease-in-out;
-				  -moz-transition: all .3s ease-in-out;
-				  -o-transition: all .3s ease-in-out;
-				  transition: all .3s ease-in-out;		
-				  position: absolute;
-			    right: 10px;
-			    top: 15px;				  
-				  
-			  	&.opened{
-				  	
-			  		-ms-transform: rotate(180deg); /* IE 9 */
-				    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-				    transform: rotate(180deg);					
-				  	
-				  	
-			  	}	
-				
+		.caret {
+			border: 0;
+			background: url('../img/icon-caret-grey.png') no-repeat;
+			background-size: 100%;
+			width: 17px;
+			height: 11px;
+			top: 5px;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+			position: absolute;
+			right: 10px;
+			top: 15px;
+			&.opened {
+				-ms-transform: rotate(180deg);
+				/* IE 9 */
+				-webkit-transform: rotate(180deg);
+				/* Chrome, Safari, Opera */
+				transform: rotate(180deg);
 			}
-		
-		
-		
-		li{
-			a{
+		}
+		li {
+			a {
 				margin-left: 5px;
-				color:@color-white;
-						
-				
+				color: @color-white;
 			}
-			.caret{
-				border:0;
+			.caret {
+				border: 0;
 				background: url('../img/icon-caret-white.png') no-repeat;
 				background-size: 100%;
 				width: 17px;
 				height: 11px;
-			}		
+			}
 			background: #31448b;
-			li{
+			li {
 				background: #425cb6;
-				a{
+				a {
 					margin-left: 10px;
 				}
-				li{
+				li {
 					background: #4f6dd7;
-					a{
+					a {
 						margin-left: 15px;
-					}					
+					}
 				}
 			}
 		}
 	}
 }
-
-
-
-		

@@ -2,13 +2,49 @@
 	Footer
 ---------------------------------------------------*/
 
-footer {
-	background: url('../img/bg-footer.jpg') #1d4288 center center no-repeat;
-	min-height: 110px;
-	color: #1d4288;
-	padding: 10px;
-	background-size: cover;
-	@media (max-width: @screen-max-sm) {
-		background-size: cover;
+.footer {
+	background: @color-primary;
+	padding: 30px;
+	&__copyright {
+		margin-bottom: 25px;
+		margin-bottom: 25px;
+		@media (min-width: @screen-max-xs) {
+			margin-bottom: 0;
+		}
+		span {
+			color: @color-white;
+			display: block;
+			padding-bottom: 10px;
+		}
+	}
+	&__social {
+		width: auto;
+		ul {
+			text-align: right;
+			li {
+				margin-right: 20px;
+				padding: 0 !important;
+				box-sizing: content-box;
+				&::before {
+					display: none;
+				}
+				.social-instagram, .social-youtube {
+					font-size: 36px;
+					color: @color-white;
+					border: 1px @color-white solid;
+					border-radius: 6px;
+					padding: 4px;
+				}
+				.social-facebook {
+					font-size: 42px;
+					color: @color-white;
+					vertical-align: sub;
+				}
+				a {
+					display: block;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }

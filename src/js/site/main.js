@@ -21,6 +21,15 @@ $(function() {
 	placeVideo();
 	
 	/*	--------------------------------------------------
+		Funcionalidad navigation
+	-------------------------------------------------- */	
+	$('ul.list-inline li.dropdown').hover(function() {
+		$(this).find('.dropdown-menu.nested').stop(true, true).delay(200).fadeIn(500);
+	}, function() {
+		$(this).find('.dropdown-menu.nested').stop(true, true).delay(200).fadeOut(500);
+	});
+
+	/*	--------------------------------------------------
 		Funcionalidad buscador
 	-------------------------------------------------- */
 
