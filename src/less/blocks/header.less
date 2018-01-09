@@ -3,15 +3,13 @@
 ---------------------------------------------------*/
 
 .masthead {
-	min-height: 110px;
+	&:extend(.clearfix all);
 	position: relative;
 	overflow: hidden;
-	@media (min-width: @screen-max-xs) {
-		min-height: 500px;
-	}
 	&__holder {
 		width: 100%;
-		position: relative;
+		position: absolute;
+		left: 0;
 		z-index: 9999;
 	}
 	&__bar {
@@ -171,7 +169,7 @@
 		display: none;
 		position: absolute;
 		z-index: 1000;
-		top: 180px;
+		top: 160px;
 		right: -5px;
 		@media (min-width: @screen-max-xs) {
 			display: block;
@@ -209,24 +207,17 @@
 	}
 	&__hero {
 		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		@media (min-width: @screen-max-xs) {
-			min-height: 500px;
-		}
 		.item {
 			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
 			position: relative;
 			&__content {
-				// display: none;
-				padding: 25px 0;
+				padding: 25px 0 0;
 				margin: 0 auto;
-				position: absolute !important;
-				left: 0;
-				right: 0;
-				bottom: 0;
 				@media (min-width: @screen-max-xs) {
+					padding: 60px 0;
 					display: block;
 				}
 				p {
@@ -236,11 +227,17 @@
 				}
 			}
 			&__heading {
-				margin-bottom: 20px;
+				margin: 100px 0 20px 0;
+				@media (min-width: @screen-max-xs) {
+					margin-bottom: 20px;
+				}
 				&__title {
-					font-size: 24px;
+					font-size: 18px;
 					font-weight: bold;
 					color: @color-white;
+					@media (min-width: @screen-max-xs) {
+						font-size: 24px;
+					}
 				}
 			}
 		}
