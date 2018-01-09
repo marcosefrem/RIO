@@ -17,6 +17,14 @@
     line-height: 30px;
     color: @color-primary;
   }
+  .text-center, .text-left, .text-right {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+  .pull-left {
+    margin-right: 20px;
+  }
 }
 
 .breakup {
@@ -156,5 +164,16 @@
     @media (min-width: @screen-max-xs) {
       margin-bottom: 25px;
     }
+  }
+}
+
+.table {
+  & > thead > tr > th, & > tbody > tr > th, & > tfoot > tr > th, & > thead > tr > td, & > tbody > tr > td, & > tfoot > tr > td {
+    color: @color-primary;
+    line-height: 2.2;
+    border-top: 1px solid @color-primary;
+  }
+  & > thead > tr > th {
+    border-bottom: 1px solid @color-primary;
   }
 }
