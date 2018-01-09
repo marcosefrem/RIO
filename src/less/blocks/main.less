@@ -139,6 +139,19 @@
     &--dark-grey {
       background: @color-grey-dark;
     }
+    &--pdfs {
+      margin-bottom: 20px;
+      @media (min-width: @screen-max-xs) {
+        margin-top: 25px;
+        margin-left: -30px;
+        margin-bottom: 0;
+      }
+    }
+    &--gradient {
+      background: -moz-linear-gradient(left, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(left, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+    }
     &--spaced {
       margin-bottom: 15px;
     }
