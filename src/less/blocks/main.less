@@ -4,6 +4,9 @@
 
 .main {
   padding: 25px 0;
+  @media (min-width: @screen-max-xs) {
+    padding: 25px 0 15px;
+  }
   &__title {
     font-size: 20px;
     font-weight: bold;
@@ -27,7 +30,7 @@
     background: -webkit-linear-gradient(left, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to right, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
   }
-  &--vertical {
+  &--left {
     width: 6px;
     height: 100%;
     background: -moz-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
@@ -41,7 +44,21 @@
       display: block;
     }
   }
-  &--vertical-inverse {
+  &--right {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media (min-width: @screen-max-xs) {
+      display: block;
+    }
+  }
+  &--right-inverse {
     width: 6px;
     height: 100%;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
@@ -54,6 +71,9 @@
     @media (min-width: @screen-max-xs) {
       display: block;
     }
+  }
+  &--spaced-bottom {
+    margin-bottom: 15px;
   }
   &--square {
     @media (min-width: @screen-max-xs) {
@@ -95,6 +115,9 @@
     }
     &--dark-grey {
       background: @color-grey-dark;
+    }
+    &--spaced {
+      margin-bottom: 15px;
     }
     &--small {
       padding: 10px 15px;
