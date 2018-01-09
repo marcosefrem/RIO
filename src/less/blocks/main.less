@@ -38,7 +38,7 @@
     background: linear-gradient(to bottom, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
     display: none;
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 0;
     @media (min-width: @screen-max-xs) {
       display: block;
@@ -95,6 +95,11 @@
   @media (min-width: @screen-max-xs) {
     margin-bottom: 45px;
   }
+  &--sup {
+    @media (min-width: @screen-max-xs) {
+      margin-top: 50px;
+    }
+  }
   &__heading {
     background: @color-primary;
     padding: 10px;
@@ -110,6 +115,9 @@
     }
     &--green {
       background: @color-green;
+    }
+    &--light-green {
+      background: @color-green-light;
     }
     &--blue {
       background: @color-blue;
