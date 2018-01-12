@@ -3,15 +3,16 @@
 ---------------------------------------------------*/
 
 .masthead {
+	&:extend(.clearfix all);
 	min-height: 110px;
-	position: relative;
-	overflow: hidden;
 	@media (min-width: @screen-max-xs) {
-		min-height: 500px;
+		min-height: 217px;
 	}
+	position: relative;
 	&__holder {
 		width: 100%;
-		position: relative;
+		position: absolute;
+		left: 0;
 		z-index: 9999;
 	}
 	&__bar {
@@ -169,9 +170,10 @@
 	&__social {
 		width: 50px;
 		display: none;
+		margin: 0 !important;
 		position: absolute;
 		z-index: 1000;
-		top: 200px;
+		top: 160px;
 		right: 0;
 		@media (min-width: @screen-max-xs) {
 			display: block;
@@ -180,9 +182,8 @@
 			li {
 				height: 36px;
 				display: block;
+				padding-right: 0 !important;
 				margin-bottom: 20px;
-				padding: 0 !important;
-				border-bottom: 3px @color-warning2 solid;
 				box-sizing: content-box;
 				&::before {
 					display: none;
@@ -192,15 +193,31 @@
 					color: @color-white;
 					border: 1px @color-white solid;
 					border-radius: 6px;
+					display: inline-block;
 					padding: 4px;
+					margin-bottom: 6px;
 				}
 				.social-facebook {
 					font-size: 32px;
 					color: @color-white;
+					display: inline-block;
+					margin-bottom: 6px;
 				}
 				a {
 					display: block;
 					text-decoration: none;
+				}
+			}
+		}
+		&--blue {
+			ul {
+				li {
+					.social-instagram, .social-youtube, .social-facebook {
+						color: @color-primary;
+					}
+					.social-instagram, .social-youtube {
+						border: 1px @color-primary solid;
+					}
 				}
 			}
 		}
@@ -220,19 +237,28 @@
 		@media (min-width: @screen-max-xs) {
 			min-height: 500px;
 		}
+
 		.item {
 			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
 			position: relative;
 			min-height: 500px;
 			background-size: cover;
 			&__content {
+
 				display: block;
 				padding: 25px 0;
 				margin: auto;
 				position: absolute;
 				top: 50%;
 			    transform: translateY(-50%);				
+
+				padding: 25px 0 0;
+				margin: 0 auto;
 				@media (min-width: @screen-max-xs) {
+					padding: 60px 0;
 					display: block;
 				}
 				p {
@@ -242,11 +268,17 @@
 				}
 			}
 			&__heading {
-				margin-bottom: 20px;
+				margin: 100px 0 20px 0;
+				@media (min-width: @screen-max-xs) {
+					margin-bottom: 20px;
+				}
 				&__title {
-					font-size: 24px;
+					font-size: 18px;
 					font-weight: bold;
 					color: @color-white;
+					@media (min-width: @screen-max-xs) {
+						font-size: 24px;
+					}
 				}
 			}
 		}

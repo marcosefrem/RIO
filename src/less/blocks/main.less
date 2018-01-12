@@ -4,24 +4,96 @@
 
 .main {
   padding: 25px 0;
-  hgroup {
-    font-size: 18px;
-    color: @color-primary;
+  @media (min-width: @screen-max-xs) {
+    padding: 25px 0 15px;
   }
-}
-
-.block {
-  &__heading {
-    &__title {
-      font-size: 20px;
-      font-weight: bold;
-      color: @color-primary;
-      margin-bottom: 15px;
-    }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: @color-primary;
+    margin-bottom: 15px;
   }
   p {
     line-height: 30px;
     color: @color-primary;
+  }
+  .text-center, .text-left, .text-right {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+  .pull-left {
+    margin-right: 20px;
+  }
+}
+
+.breakup {
+  height: 4px;
+  background: -moz-linear-gradient(left, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  background: -webkit-linear-gradient(left, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  background: linear-gradient(to right, @color-warning2 1%, @color-white 50%, @color-warning2 100%);
+  &--blurred {
+    height: 5px;
+    background: -moz-linear-gradient(left, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  &--left {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @media (min-width: @screen-max-xs) {
+      display: block;
+    }
+  }
+  &--left-sup {
+    left: 10px;
+    top: -30px;
+  }
+  &--right {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, @color-warning2 0%, rgba(255, 255, 255, 0) 100%);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media (min-width: @screen-max-xs) {
+      display: block;
+    }
+  }
+  &--right-inverse {
+    width: 6px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, @color-warning2 100%);
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    @media (min-width: @screen-max-xs) {
+      display: block;
+    }
+  }
+  &--spaced-bottom {
+    margin-bottom: 15px;
+  }
+  &--square {
+    @media (min-width: @screen-max-xs) {
+      margin-top: -45px;
+    }
+    @media (min-width: @screen-max-sm) {
+      margin-top: -45px;
+    }
   }
 }
 
@@ -31,10 +103,23 @@
 	  width: 100%;
   }
   
-
+  &:extend(.clearfix all);
+  @media (min-width: @screen-max-xs) {
+  }
+  &--sup {
+    @media (min-width: @screen-max-xs) {
+      margin-top: 50px;
+    }
+  }
+  &--fluid {
+    margin: 0;
+  }
   &__heading {
     background: @color-primary;
-    padding: 15px;
+    padding: 10px;
+    @media (min-width: @screen-max-sm) {
+      padding: 15px;
+    }
     &__title {
       font-size: 18px;
       color: @color-white;
@@ -45,6 +130,9 @@
     &--green {
       background: @color-green;
     }
+    &--light-green {
+      background: @color-green-light;
+    }
     &--blue {
       background: @color-blue;
     }
@@ -53,6 +141,27 @@
     }
     &--dark-grey {
       background: @color-grey-dark;
+    }
+    &--pdfs {
+      margin-bottom: 20px;
+      @media (min-width: @screen-max-xs) {
+        margin-top: 25px;
+        margin-left: -30px;
+        margin-bottom: 0;
+      }
+    }
+    &--gradient {
+      background: -moz-linear-gradient(left, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(left, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, @color-warning2 0%, @color-warning2 60%, rgba(255, 255, 255, 0) 100%);
+    }
+    &--spaced {
+      margin-bottom: 15px;
+    }
+    &--short {
+      @media (min-width: @screen-max-xs) {
+        width: 48%;
+      }
     }
     &--small {
       padding: 10px 15px;
@@ -64,12 +173,37 @@
 }
 
 .col-fx {
+  position: relative;
   &--margin {
     @media (min-width: @screen-max-xs) {
       margin: 0 15px 0 -15px;
     }
   }
   .square {
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
+    @media (min-width: @screen-max-xs) {
+      margin-bottom: 10px;
+    }
   }
+}
+
+.table {
+  & > thead > tr > th, & > tbody > tr > th, & > tfoot > tr > th, & > thead > tr > td, & > tbody > tr > td, & > tfoot > tr > td {
+    color: @color-primary;
+    line-height: 2.2;
+    border-top: 1px solid @color-primary;
+  }
+  & > thead > tr > th {
+    border-bottom: 1px solid @color-primary;
+  }
+}
+
+.form-control {
+  min-height: 30px !important;
+  font-size: 13px !important;
+}
+
+.btn {
+  width: auto !important;
+  display: inline-block !important;
 }
