@@ -202,12 +202,32 @@
 					color: @color-white;
 					display: inline-block;
 					margin-bottom: 6px;
+					
+				
 				}
+
+				
+				
+				
+				
 				a {
 					display: block;
 					text-decoration: none;
 				}
 			}
+				
+			&.blue{
+				.social-instagram, .social-youtube, .social-facebook {
+					color: @color-primary;
+				}
+				.social-instagram, .social-youtube {
+					border: 1px @color-primary solid;
+				}					
+				
+			}			
+			
+			
+			
 		}
 		&--blue {
 			ul {
@@ -227,7 +247,6 @@
 		position: relative;
 		left: 0;
 		top: 0;
-		margin-top: -70px;
 		
 		[class*="col-"],
 		.container{

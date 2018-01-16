@@ -18,10 +18,30 @@
 section {
 	position: relative;
 }
+
+p {
+	text-align: justify;
+}
+
 a:hover,
 a:hover .square,
 a:hover h3{
 	text-decoration: none;
+}
+
+
+
+[class*="no-padding"] .decoration{
+	&__right{
+		&:after{
+			right: 0px;
+		}
+	}
+	&__left{
+		&:after{
+			left: 0px;
+		}
+	}
 }
 
 .decoration{
@@ -263,6 +283,35 @@ a:hover {
 	}
 }
 
+.no-margin-b{
+	margin-bottom: 0!important;
+}
+
+@media (min-width: @screen-max-sm) {
+
+	.row {
+		&.no-padding-sm {
+			[class*="col-"] {
+				&:first-child {
+					padding-right: 0;
+				}
+				&:last-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+@media (min-width: @screen-max-sm) {
+
+	.padding-l-sm-50{
+		padding-left: 50px;
+	}
+	.padding-r-sm-50{
+		padding-right: 50px;
+	}
+}
+
 @media (max-width: @screen-max-xs) {
 	.no-padding-xs {
 		padding: 0!important;
@@ -442,6 +491,9 @@ a:hover {
 	margin-bottom: 60px;
 }
 
+.margin-b-100 {
+	margin-bottom: 100px!important;
+}
 .margin-lr-5 {
 	margin-left: 5px;
 	margin-right: 5px;
